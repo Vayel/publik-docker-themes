@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<theme name="loireatlantique" version="1.0">
-  <label>Loire Atlantique - Publik theme</label>
-  <desc>Theme for Publik deployments by Departement de Loire Atlantique</desc>
+<theme name="smica" version="1.0">
+  <label>SMICA - Publik theme</label>
+  <desc>Theme for Publik deployments by Laëtis</desc>
   <keywords>
     <keyword>auquotidien-no-titles-in-section</keyword>
     <keyword>auquotidien-welcome-in-services</keyword>

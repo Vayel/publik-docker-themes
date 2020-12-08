@@ -1,19 +1,22 @@
 [
-  {"id": "publik",
-   "label": "Publik",
-   "variables": {
-     "css_variant": "publik",
-     "theme_color": "#E80E89"
-   }
+  {
+    "id": "publik",
+    "label": "Publik",
+    "variables": {
+      "css_variant": "publik",
+      "theme_color": "#E80E89"
+    }
   },
-  {"id": "loireatlantique",
-   "label": "Loire-Atlantique",
-   "variables": {
-     "css_variant": "loireatlantique",
-     "logo_link_url": "http://www.loire-atlantique.fr/",
-     "favicon": "images/favicon.png",
-     "no_extra_js": true,
-     "theme_color": "#AEC900",
-     "email_header_img": "images/email-logo-header.png"
-  }}
+  {
+    "id": "loireatlantique",
+    "label": "Loire-Atlantique",
+    "variables": {
+      "css_variant": "loireatlantique",
+      "logo_link_url": "http://www.loire-atlantique.fr/",
+      "favicon": "images/favicon.png",
+      "no_extra_js": true,
+      "theme_color": "#AEC900",
+      "email_header_img": "images/email-logo-header.png"
+    }
+  }
 ]
