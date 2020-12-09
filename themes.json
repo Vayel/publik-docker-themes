@@ -8,10 +8,10 @@
     }
   },
   {
-    "id": "smica",
-    "label": "smica",
+    "id": "smica-bleu",
+    "label": "smica-bleu",
     "variables": {
-      "css_variant": "smica",
+      "css_variant": "smica-bleu",
       "theme_color": "#0e6ba4"
     }
   }
