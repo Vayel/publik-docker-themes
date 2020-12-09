@@ -1,0 +1,36 @@
+/* Overrides "includes/_misc.scss" */
+#messages li,
+div.infonotice,
+div.successnotice,
+div.warningnotice,
+div.errornotice {
+  @if lightness($notification_error_color) > 50 {
+    color: #000;
+  } @else {
+    color: text-color($notification_error_color);
+  }
+}
+
+#messages li.info,
+div.infonotice {
+  background: $notification_info_color;
+  @if lightness($notification_info_color) > 50 {
+    color: #000;
+  } @else {
+    color: text-color($notification_info_color);
+  }
+}
+
+/* Overrides "includes/_forms.scss" */
+%button {
+  &:disabled {
+    background: $button-background;
+    color: $button-color;
+    border-color: $button-border;
+  }
+}
+
+/* Overrides "includes/_utils.scss" */
+@function text-color($color) {
+  @return $white;
+}
