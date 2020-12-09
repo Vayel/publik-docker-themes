@@ -29,8 +29,3 @@ div.infonotice {
     border-color: $button-border;
   }
 }
-
-/* Overrides "includes/_utils.scss" */
-@function text-color($color) {
-  @return $white;
-}
