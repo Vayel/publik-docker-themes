@@ -10,7 +10,8 @@ def update_json(slug, label):
         "id": slug,
         "label": label,
         "variables": {
-            "css_variant": slug
+            "css_variant": slug,
+            "theme_color": "#FF0000"
         },
     })
     with open("themes.json", "w") as f:
@@ -30,6 +31,6 @@ def create_theme(slug, label):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("slug")
-    parser.add_argument("label", default=None)
+    parser.add_argument("label", nargs="?", default=None)
     args = parser.parse_args()
     create_theme(args.slug, args.label or args.slug)
