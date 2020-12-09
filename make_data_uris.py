@@ -5,6 +5,8 @@ import argparse
 
 
 def data_uri(sourcepath):
+    if not os.path.isdir(sourcepath):
+        return []
     path = os.getcwd()
     os.chdir(sourcepath)
     data_uris = []
