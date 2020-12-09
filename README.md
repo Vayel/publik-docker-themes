@@ -1,34 +1,22 @@
-# Theme for Publik by https://www.laetis.fr/
+# Themes for Publik
+
+Themes for [https://github.com/Vayel/publik-docker](https://github.com/Vayel/publik-docker).
 
 ```
-git clone https://github.com/Vayel/publik-themes.git --recurse-submodules
-cd publik-themes
+git clone https://github.com/Vayel/publik-docker-themes.git --recurse-submodules
+cd publik-docker-themes
 ```
 
 ## How themes work
 
+See [publik-docker documentation](https://github.com/Vayel/publik-docker/blob/master/docs/themes.md).
+
 We're following [Entr'ouvert guidelines](https://dev.entrouvert.org/projects/prod-eo/wiki/HowDoWeDoThemes).
-
-Themes are made of two folders:
-
-* `static` that contains theme-specific static files (css, images...)
-* `templates` that contains theme-specific Django templates with the same structure as `publik-base-theme/templates`
-
-Custom themes are built on top of Publik base theme. It means that you only have
-the templates and the statics you want to add/override compared to the base theme.
 
 ## Create theme
 
 ```
-python3 create-theme.py <slug>
-```
-
-## Deploy themes
-
-When you are on the machine where your Publik instance is running:
-
-```
-./deploy.sh
+python3 add-theme.py <slug> [<label>]
 ```
 
 ## Delete theme
