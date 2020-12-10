@@ -1,0 +1,14 @@
+{% extends "combo/page_template.html" %}
+
+{% block header-title %}
+<h1 id="logo">
+  {% if collectivite %}
+    <a accesskey="1" href="{% firstof logo_link_url portal_url '/' %}">
+      <span class="subtitle">Commune de</span>
+      <span class="title">{{ collectivite }}</span>
+    </a>
+  {% else %}
+    <a accesskey="1" href="{% firstof logo_link_url portal_url '/' %}">{% firstof collectivite global_title site_title collectivite "Compte Citoyen" %}</a>
+  {% endif %}
+</h1>
+{% endblock %}
