@@ -3,8 +3,8 @@
 Themes for [https://github.com/Vayel/publik-docker](https://github.com/Vayel/publik-docker).
 
 ```
-git clone https://github.com/Vayel/publik-docker-themes.git --recurse-submodules
-cd publik-docker-themes
+cd publik-docker/data
+git clone https://github.com/Vayel/publik-docker-themes.git themes --recurse-submodules
 ```
 
 ## How themes work
