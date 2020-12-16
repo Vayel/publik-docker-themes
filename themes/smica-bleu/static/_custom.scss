@@ -29,3 +29,65 @@ div.infonotice {
     border-color: $button-border;
   }
 }
+
+/* Overrides "includes/_header.scss" */
+.site-header {
+  background-color: $secondary-color;
+  min-height: 100px;
+
+  #logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      color: white;
+
+      span.subtitle {
+        font-size: 12px;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+/* Footer */
+#footer {
+  display: flex;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+
+  & > div {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  .logo-smica img {
+    width: 50%;
+  }
+
+  .logo-laetis img {
+    width: 50%;
+  }
+
+  .logo-publik img {
+    width: 50%;
+  }
+}
