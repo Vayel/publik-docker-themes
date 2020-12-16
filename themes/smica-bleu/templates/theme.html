@@ -12,9 +12,11 @@
       {% if collectivite_adresse_complement %}
       {{collectivite_adresse_complement}}<br>
       {% endif %}
-      {% if collectivite_code_postal and collectivite %}
-      {{collectivite_code_postal}} {{collectivite}}<br>
-      {% endif %}
+      {% with ville=collectivite_ville|default:collectivite %}
+        {% if collectivite_code_postal and ville %}
+        {{collectivite_code_postal}} {{ville}}<br>
+        {% endif %}
+      {% endwith %}
       {% if collectivite_email %}
       Mail : <a href="mailto:{{collectivite_email}}" title="{{collectivite_email}}">{{collectivite_email}}</a><br>
       {% endif %}
