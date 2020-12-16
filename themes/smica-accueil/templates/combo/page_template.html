@@ -1,0 +1,11 @@
+{% extends "combo/page_template.html" %}
+{% load static %}
+
+{% block header-title %}
+  <h1 id="logo">
+    <a accesskey="1" href="{% firstof logo_link_url portal_url '/' %}" title="Accueil" class="header-link">
+      <img class="logo-img" src="{% static '' %}{{ theme }}/images/logo.jpg" alt="Logo SMICA">
+    </a>
+    <p class="subtitle">Toutes <strong>vos démarches<br>en ligne</strong> avec le SMICA</p>
+  </h1>
+{% endblock %}

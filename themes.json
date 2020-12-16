@@ -8,6 +8,14 @@
     }
   },
   {
+    "id": "smica-accueil",
+    "label": "smica-accueil",
+    "variables": {
+      "css_variant": "smica-accueil",
+      "theme_color": "#675263"
+    }
+  },
+  {
     "id": "smica-bleu",
     "label": "smica-bleu",
     "variables": {
