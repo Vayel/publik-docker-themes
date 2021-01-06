@@ -8,10 +8,12 @@ function copy_dir() {
 
   rm -rf $DEST
   mkdir -p $DEST
-  cp -R $SRC/* $DEST
+  if [ -d "$SRC" ] && [ ! -z "$(ls -A $SRC)" ]; then
+    cp -R $SRC/* $DEST
+  fi
 }
 
-DEST_DIR=/usr/share/publik/themes/publik-base
+DEST_DIR=deployed
 BASE_DIR=`pwd`
 
 mkdir -p "$DEST_DIR/templates/variants"

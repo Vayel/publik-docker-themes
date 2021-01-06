@@ -1,5 +1,8 @@
-$primary-color: var(--secondary-color);
-$secondary-color: var(--primary-color);
+$text-color: #FFFFFF;
+$card-color: #000000;
+
+$primary-color: $text-color;
+$secondary-color: $card-color;
 
 $width: 1240px;
 $font-size: 15px;
