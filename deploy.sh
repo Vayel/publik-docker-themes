@@ -13,14 +13,19 @@ function copy_dir() {
   fi
 }
 
-DEST_DIR=deployed
 BASE_DIR=`pwd`
+DEST_DIR=$BASE_DIR/deployed
 
 mkdir -p "$DEST_DIR/templates/variants"
 
 cd themes
 for theme in *
 do
+  if [ "$theme" = __* ]; then
+    echo "Skipping abstract theme $theme"
+    continue
+  fi
+
   echo "Deploying $theme..."
   copy_dir "$BASE_DIR/themes/$theme/static" "$DEST_DIR/static/$theme"
   copy_dir "$BASE_DIR/themes/$theme/templates" "$DEST_DIR/templates/variants/$theme"

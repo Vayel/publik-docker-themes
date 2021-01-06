@@ -1,26 +1,26 @@
 [
   {
-    "id": "publik",
-    "label": "Publik",
     "variables": {
-      "css_variant": "publik",
+      "css_variant": "publik", 
       "theme_color": "#E80E89"
-    }
-  },
+    }, 
+    "id": "publik", 
+    "label": "Publik"
+  }, 
   {
-    "id": "smica-accueil",
-    "label": "smica-accueil",
     "variables": {
-      "css_variant": "smica-accueil",
+      "css_variant": "smica-accueil", 
       "theme_color": "#675263"
-    }
-  },
+    }, 
+    "id": "smica-accueil", 
+    "label": "smica-accueil"
+  }, 
   {
-    "id": "smica-bleu",
-    "label": "smica-bleu",
     "variables": {
-      "css_variant": "smica-bleu",
+      "css_variant": "smica-bleu", 
       "theme_color": "#0e6ba4"
-    }
+    }, 
+    "id": "smica-bleu", 
+    "label": "smica-bleu"
   }
 ]

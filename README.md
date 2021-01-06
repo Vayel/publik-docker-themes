@@ -16,8 +16,12 @@ We're following [Entr'ouvert guidelines](https://dev.entrouvert.org/projects/pro
 ## Create theme
 
 ```
-python3 add-theme.py <slug> [<label>]
+python3 add-theme.py <slug> [<label>] [<color>] [--abstract]
 ```
+
+Abstract themes are bases for other themes. They may contain uncomplete SCSS that
+will be completed by their children (e.g. the main colors). They are not added
+to the `themes.json` and their slug is prepended by `__`.
 
 ## Delete theme
 
