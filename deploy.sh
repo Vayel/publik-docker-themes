@@ -22,7 +22,7 @@ cd themes
 for theme in *
 do
   if [ "$theme" = __* ]; then
-    echo "Skipping abstract theme $theme"
+    echo "Skipping deployment for abstract theme $theme"
     continue
   fi
 
