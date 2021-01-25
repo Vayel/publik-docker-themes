@@ -92,3 +92,17 @@ div.infonotice {
     width: 50%;
   }
 }
+
+div#fc-button {
+  width: 230px !important;
+  height: 60px !important;
+  margin: auto !important;
+  box-shadow: none !important;
+  transition: none !important;
+  padding: 0 !important;
+  background: url($data_uri_franceconnect-bouton) !important;
+}
+
+div#fc-button:hover {
+  background: url($data_uri_franceconnect-bouton-hover) !important;
+}

@@ -1,0 +1,14 @@
+{% load staticfiles %}
+{% load i18n %}
+
+{% block login %}
+<link rel="stylesheet" type="text/css" href="{% static 'authentic2_auth_fc/css/fc.css' %}">
+{% include "authentic2_auth_fc/explanation.html" %}
+<div id="fc-button-wrapper">
+    <a href="{{ login_url }}" class="button connexion{% if popup %} js-fc-popup{% endif %}">
+        <div id="fc-button"></div>
+    </a>
+</div>
+{% include "authentic2_auth_fc/link.html" %}
+{% if popup %}<script src="{% static 'authentic2_auth_fc/js/fc.js' %}" type="text/javascript"></script>{% endif %}
+{% endblock %}
