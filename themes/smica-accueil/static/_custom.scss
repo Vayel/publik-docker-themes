@@ -93,6 +93,7 @@ div.infonotice {
   }
 }
 
+/* Custom login page */
 div#fc-button {
   width: 230px !important;
   height: 60px !important;
@@ -105,4 +106,13 @@ div#fc-button {
 
 div#fc-button:hover {
   background: url($data_uri_franceconnect-bouton-hover) !important;
+}
+
+#login-page {
+  display: flex;
+}
+
+#login-page .block h3 {
+  text-align: center;
+  margin-bottom: 40px;
 }
