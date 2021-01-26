@@ -12,3 +12,19 @@
   {% endif %}
 </h1>
 {% endblock %}
+
+{% block user-info %}
+{% skeleton_extra_placeholder user-info %}
+  {% if user.is_authenticated %}
+    <span class="logged-in">
+    {% if idp_account_url %}<a class="account-link" href="{{idp_account_url}}">{% endif %}
+    <span class="connected-user">{% block user-info-user-name %}{{user.first_name}} {{user.last_name}}{% endblock %}</span>{% if idp_account_url %}</a>{% endif %}
+    <a accesskey="o" class="logout" href="{% url 'auth_logout' %}">{% block user-info-logout-label %}Déconnexion{% endblock %}</a>
+    </span>
+  {% else %}
+    <span class="login"><a accesskey="2" class="login-link" href="{% url 'auth_login' %}"
+    >{% block user-info-login-label %}Connexion{% endblock %}
+    </a>
+  {% endif %}
+{% end_skeleton_extra_placeholder %}
+{% endblock %}
