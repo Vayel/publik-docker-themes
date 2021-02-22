@@ -21,6 +21,10 @@ div.infonotice {
   }
 }
 
+#publik-portal-agent {
+  display: none;
+}
+
 /* Overrides "includes/_forms.scss" */
 %button {
   &:disabled {
