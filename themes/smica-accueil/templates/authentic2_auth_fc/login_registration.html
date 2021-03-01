@@ -4,7 +4,8 @@
 <link rel="stylesheet" type="text/css" href="{% static 'authentic2_auth_fc/css/fc.css' %}">
 
 <div id="fc-registration-user-info">
-   <h3>{% trans "Create your account with FranceConnect" %}</h3>
+  <h3>Finalisez votre inscription</h3>
+  <p>Le compte ci-dessous n'existe pas, veuillez finaliser sa création en cliquant sur le bouton d'identification.</p>
   {% include "authentic2_auth_fc/explanation.html" %}
     <p class="certified">
       <span class="fc-user-full-name">{{ fc_user_info.given_name }} {{ fc_user_info.family_name }}</span>
