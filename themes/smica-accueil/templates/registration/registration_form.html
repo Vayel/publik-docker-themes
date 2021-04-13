@@ -1,0 +1,34 @@
+{% extends "authentic2/base.html" %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Registration" %}
+{% endblock %}
+
+{% block extra-body-class %}{{ block.super }} registration-page{% endblock %}
+
+{% block placeholder-content %}
+
+{% block registration-pre %}{% endblock %}
+<div id="registration-blocks" class="methods{{frontends.items|length}}">
+  {% block registration-top %}{% endblock %}
+
+  {% block registration-other-methods %}
+  {% for id, block in frontends.items %}
+  {% if id == "password" %}
+  <div id="frontend-registration-email" class="a2-block">
+  {{ block.content|safe }}
+  {% else %}
+  <div id="frontend-registration-{{ id }}" class="a2-block">
+  <div>
+  {{ block.content|safe }}
+  </div>
+  {% endif %}
+  </div>
+  {% endfor %}
+  {% endblock %}
+  {% block registration-bottom %}{% endblock %}
+</div> <!-- #registration-blocks -->
+{% block registration-post %}{% endblock %}
+
+{% endblock %}

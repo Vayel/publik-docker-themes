@@ -108,11 +108,15 @@ div#fc-button:hover {
   background: url($data_uri_franceconnect-bouton-hover) !important;
 }
 
-#login-page {
-  display: flex;
-}
-
-#login-page .block h3 {
+.login-page h3,
+.registration-page h3 {
   text-align: center;
   margin-bottom: 40px;
+}
+
+/* Pour que les blocs aient la meme hauteur */
+.login-page #login-page,
+.registration-page #registration-blocks {
+  display: flex;
+  margin-top: 50px;
 }

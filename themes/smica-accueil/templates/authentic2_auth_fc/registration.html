@@ -1,8 +1,10 @@
+{# https://repos.entrouvert.org/authentic.git/tree/src/authentic2_auth_fc/templates/authentic2_auth_fc #}
 {% load staticfiles %}
 {% load i18n %}
 
 {% block registration %}
 <link rel="stylesheet" type="text/css" href="{% static 'authentic2_auth_fc/css/fc.css' %}"/>
+<h3>S'inscrire comme citoyen</h3>
 {% include "authentic2_auth_fc/explanation.html" %}
 <div id="fc-button-wrapper">
     <a href="{{ login_url }}" class="button connexion{% if popup %} js-fc-popup{% endif %}">
