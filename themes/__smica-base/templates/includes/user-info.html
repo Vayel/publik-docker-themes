@@ -1,0 +1,27 @@
+{% load combo %}
+
+{% if include_top_links != False %}
+<div id="toplinks">
+{% block user-info %}
+{% skeleton_extra_placeholder user-info %}
+  {% if user.is_authenticated %}
+    <span class="logged-in">
+    {% if idp_account_url %}<a class="account-link" href="{{idp_account_url}}">{% endif %}
+    <span class="connected-user">{% block user-info-user-name %}{{user.first_name}} {{user.last_name}}{% endblock %}</span>{% if idp_account_url %}</a>{% endif %}
+    <a accesskey="o" class="logout" href="{% url 'auth_logout' %}">{% block user-info-logout-label %}Déconnexion{% endblock %}</a>
+    </span>
+  {% else %}
+    {% firstof registration_url idp_registration_url as registration_url %}
+    <span class="login"><a accesskey="2" class="login-link" href="{% url 'auth_login' %}"
+    >{% block user-info-login-label %}Authentification{% endblock %}
+    {% if registration_url and include_registration_link != False %}</a>{% endif %}
+    <!--
+    <span class="sep">/</span>
+    {% if registration_url and include_registration_link != False %}<a class="registration" href="{{registration_url}}"
+    >{% block user-info-registration-label %}Inscription{% endblock %}{% endif %}</a></span>
+    -->
+  {% endif %}
+{% end_skeleton_extra_placeholder %}
+{% endblock %}
+</div>
+{% endif %}
